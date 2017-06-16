@@ -24,8 +24,9 @@ module.exports = {
         use: {
           loader: 'process-loader',
           options: {
-            process: (content) => {
+            process: (content, path) => {
               // some pretty stuff
+              console.log(path);
               console.log(content);
               return content;
             }
