@@ -19,5 +19,5 @@ module.exports = function(content) {
       throw new Error('The option "process" must be a function.');
   }
   else throw new Error('The process-loader needs a function to be set to "options.process".');
-	return "module.exports = \"" + content + "\"";
+	return content;
 }
