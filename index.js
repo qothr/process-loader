@@ -14,7 +14,7 @@ module.exports = function(content) {
   var config = assign(query, options);
   if (config.process) {
     if ('function' === typeof config.process)
-      content = config.process(content);
+      content = config.process(content, this.resourcePath);
     else
       throw new Error('The option "process" must be a function.');
   }
